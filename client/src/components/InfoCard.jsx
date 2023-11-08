@@ -5,14 +5,14 @@ import { Row, Col } from 'react-bootstrap';
 function InfoCard(props) {
   //Expecting props.headerText, props.text, props.imagePath, props.alignImageRight (true/false)
 
-  const [currentBlur, setCurrentBlur] = useState(0);
-  const [currentScale, setCurrentScale] = useState(1);
-  const [currentXOffset, setCurrentXOffset] = useState(1);
-  const [windowHeight, setWindowHeight] = useState(1);
-
   const blurMax = 100;
   const scaleMin = 0.5;
   const maxXOffset = 50; // percent of screen
+
+  const [currentBlur, setCurrentBlur] = useState(blurMax);
+  const [currentScale, setCurrentScale] = useState(1);
+  const [currentXOffset, setCurrentXOffset] = useState(maxXOffset);
+  const [windowHeight, setWindowHeight] = useState(1);
 
   const ref = useRef();
 
@@ -42,8 +42,10 @@ function InfoCard(props) {
   }
 
   const handleLoad = () => {
+    //NONE OF THIS WORKS BECAUSE OF VARIABLES IN CALCULATE FUNCTIONS NOT BEING SET YET (I THINK)
     setCurrentBlur(calculateBlur());
     setCurrentScale(calculateScale());
+    setCurrentXOffset(calculateXOffset());
   }
 
   useEffect(() => {
