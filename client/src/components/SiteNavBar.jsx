@@ -1,4 +1,3 @@
-import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
@@ -13,15 +12,14 @@ function SiteNavBar(props) {
   }
 
   return (
-      <Navbar expand="lg" className="nav-bar-custom" data-bs-theme="dark">
-          <Navbar.Brand>
-            <Button className="nav-bar-menu-button" onClick={SiteNavMenuOpenClicked}>
-              <BsList className="nav-bar-menu-button-icon"/>
-            </Button>
-            {' '}Brennan Johnston
-          </Navbar.Brand>
-          
-      </Navbar>
+    <Navbar expand="lg" fixed="top" className="nav-bar-custom" data-bs-theme="dark">
+        <Navbar.Brand>
+          <Button className="nav-bar-menu-button" onClick={SiteNavMenuOpenClicked}>
+            <BsList className="nav-bar-menu-button-icon"/>
+          </Button>
+          {' '}Brennan Johnston Portfolio
+        </Navbar.Brand>
+    </Navbar>
   );
 }
 

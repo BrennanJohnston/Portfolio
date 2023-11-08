@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import reactLogo from './assets/react.svg'
@@ -12,37 +12,50 @@ import Button from 'react-bootstrap/Button'
 import AboutMePage from './pages/AboutMePage';
 import PortfolioPage from './pages/PortfolioPage';
 import ContactPage from './pages/ContactPage';
+import ChiPage from './pages/ChiPage';
 import PageNotFoundPage from './pages/PageNotFoundPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
+import './ColorTheme.css';
 
 function App() {
   const [showNavMenu, setShowNavMenu] = useState(false);
+  const [currentPageY, setCurrentPageY] = useState(0);
 
   const handleNavMenuClose = () => setShowNavMenu(false);
   const handleNavMenuShow = () => setShowNavMenu(true);
 
+  const ref = useRef();
+
+  const handleScroll = () => {
+    
+  }
+
+  useEffect(()=>{
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }, []);
+
   return (
-    <>
+    <div ref={ref}>
       <BrowserRouter>
         <SiteNavMenu show={showNavMenu} onHide={handleNavMenuClose} onShow={handleNavMenuShow}/>
-        
-        <Container className="vh-100 webpage-container">
+
+        <SiteNavBar showNavMenu={showNavMenu} handleNavMenuShow={handleNavMenuShow}/>
+
+        <Container className="webpage-container">
           <Row>
             <Col sm={12}>
-              <SiteNavBar showNavMenu={showNavMenu} handleNavMenuShow={handleNavMenuShow}/>
-            </Col>
-          </Row>
-          <Row className="h-100">
-            <Col sm={12}>
-              
-                <Routes>
-                  <Route index element={<AboutMePage />} />
-                  <Route path="portfolio" element={<PortfolioPage />} />
-                  <Route path="contact" element={<ContactPage />} />
-                  <Route path="*" element={<PageNotFoundPage />} />
-                </Routes>
-              
+              <Routes>
+                <Route index element={<AboutMePage />} />
+                <Route path="portfolio" element={<PortfolioPage />} />
+                <Route path="contact" element={<ContactPage />} />
+                <Route path="chi" element={<ChiPage />} />
+                <Route path="*" element={<PageNotFoundPage />} />
+              </Routes>
             </Col>
           </Row>
         </Container>
@@ -70,7 +83,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       */ }
-    </>
+    </div>
   )
 }
 

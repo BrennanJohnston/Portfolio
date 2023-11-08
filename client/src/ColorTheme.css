@@ -1,0 +1,92 @@
+#root {
+  background-color: white;
+}
+
+.row {
+}
+
+.webpage-container {
+}
+
+.custom-page {
+}
+
+.navbar-brand {
+}
+
+.nav-bar-custom {
+  background-color: black;
+}
+
+.nav-bar-menu-button {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.nav-bar-menu-button:hover {
+  background-color: black;
+  border-color: black;
+  color:white;
+}
+
+.nav-bar-menu-button:active:focus {
+  color: black;
+  background-color: white;
+  border-color: white;
+}
+
+.nav-bar-menu-button-icon {
+
+}
+
+.btn-primary {
+
+}
+
+.nav-menu {
+  background-color: white;
+}
+
+.nav-menu-link-container {
+  
+}
+
+.nav-menu-row {
+
+}
+
+.btn-close:active {
+  border-color: transparent;
+  color: white;
+}
+
+.nav-menu-button {
+  background-color: transparent;
+  border-color: black;
+  color: black;
+}
+
+.nav-menu-button:hover {
+  background-color: black;
+  border-color: black;
+  color: white;
+}
+
+.nav-menu-button:active:focus {
+  color: black;
+  background-color: white;
+  border-color: white;
+}
+
+.info-card-container > .row {
+}
+
+.info-card {
+
+}
+
+.info-card-header {
+}
+
+.page-header {
+}

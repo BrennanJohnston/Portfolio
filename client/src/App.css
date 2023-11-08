@@ -7,7 +7,6 @@
   /*padding: 2rem;*/
   padding: 0px;
   text-align: center;
-  background-color: #8a8a8a;
 }
 
 .row {
@@ -18,14 +17,16 @@
   */
 }
 
-.container {
-  
-}
-
 .webpage-container {
   padding-left: 0px;
   padding-right: 0px;
+  padding-top: 50vh;/*100px;*/
   max-width: 1600px;
+  min-height: 100vh;
+}
+
+.custom-page {
+  padding-top: 0px;
 }
 
 .navbar-brand {
@@ -34,26 +35,16 @@
 }
 
 .nav-bar-custom {
-  background-color: #696969;
-  color: #f05a5a;
 }
 
 .nav-bar-menu-button {
   padding: 5px;
-  background-color: transparent;
-  border-color: transparent;
 }
 
 .nav-bar-menu-button:hover {
-  background-color: black;
-  border-color: black;
-  color:white;
 }
 
 .nav-bar-menu-button:active:focus {
-  color: black;
-  background-color: white;
-  border-color: white;
 }
 
 .nav-bar-menu-button-icon {
@@ -67,7 +58,6 @@
 }
 
 .nav-menu {
-  background-color: #696969;
 }
 
 .nav-menu-link-container {
@@ -80,18 +70,32 @@
 
 .nav-menu-button {
   width: 100%;
-  background-color: transparent;
-  border-color: black;
-  color: black;
 }
 
 .nav-menu-button:hover {
-  background-color: black;
-  border-color: black;
 }
 
 .nav-menu-button:active:focus {
-  color: black;
-  background-color: white;
-  border-color: white;
+}
+
+.info-card-container > .row {
+  padding-bottom: 80px;
+}
+
+.info-card {
+  min-height: 80vh;
+  max-height: 100vh;
+  /*filter: blur(calc(2.1px * 1));*/
+}
+
+.info-card-header {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.page-header {
+  padding-bottom: 50px;
+  font-size: 32px;
+  font-weight: bold;
+  height: 35vh;
 }

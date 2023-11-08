@@ -38,6 +38,11 @@ function SiteNavMenu(props) {
                 <Button className="nav-menu-button" onClick={() => handleChangePage("contact")}>Contact</Button>
               </Col>
             </Row>
+            <Row className="nav-menu-row">
+              <Col sm={12}>
+                <Button className="nav-menu-button" onClick={() => handleChangePage("chi")}>My Cat</Button>
+              </Col>
+            </Row>
           </Container>
         </Offcanvas.Body>
       </Offcanvas>

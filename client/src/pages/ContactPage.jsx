@@ -3,7 +3,7 @@ import { useState } from 'react';
 function ContactPage(props) {
 
   return (
-    <div className="custompage">
+    <div className="custom-page">
       CONTACT PAGE CONTENT HERE
     </div>
   );
