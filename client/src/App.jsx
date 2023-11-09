@@ -48,7 +48,7 @@ function App() {
 
         <SiteNavBar showNavMenu={showNavMenu} handleNavMenuShow={handleNavMenuShow}/>
 
-        <Parallax blur={8} bgImage={background1Image} strength={2000} bgImageStyle={{}}>
+        <Parallax blur={8} bgImage={background1Image} strength={1000} bgImageStyle={{}}>
           <Container className="webpage-container">
             <Row>
               <Col sm={12}>
