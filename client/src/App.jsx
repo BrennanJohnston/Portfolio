@@ -1,8 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import SiteNavBar from './components/SiteNavBar'
 import SiteNavMenu from './components/SiteNavMenu'
 import Container from 'react-bootstrap/Container';
@@ -14,7 +12,11 @@ import PortfolioPage from './pages/PortfolioPage';
 import ContactPage from './pages/ContactPage';
 import ChiPage from './pages/ChiPage';
 import PageNotFoundPage from './pages/PageNotFoundPage';
+import { Parallax } from 'react-parallax';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import background1Image from './images/background9.jpg';
+import background2Image from './images/background2.jpg';
+import background3Image from './images/background3.jpg';
 import './App.css'
 import './ColorTheme.css';
 
@@ -40,26 +42,30 @@ function App() {
   }, []);
 
   return (
-    <div ref={ref}>
+    <div ref={ref} className="full-page">
       <BrowserRouter>
         <SiteNavMenu show={showNavMenu} onHide={handleNavMenuClose} onShow={handleNavMenuShow}/>
 
         <SiteNavBar showNavMenu={showNavMenu} handleNavMenuShow={handleNavMenuShow}/>
 
-        <Container className="webpage-container">
-          <Row>
-            <Col sm={12}>
-              <Routes>
-                <Route index element={<AboutMePage />} />
-                <Route path="portfolio" element={<PortfolioPage />} />
-                <Route path="contact" element={<ContactPage />} />
-                <Route path="chi" element={<ChiPage />} />
-                <Route path="*" element={<PageNotFoundPage />} />
-              </Routes>
-            </Col>
-          </Row>
-        </Container>
+        <Parallax blur={8} bgImage={background1Image} strength={2000} bgImageStyle={{}}>
+          <Container className="webpage-container">
+            <Row>
+              <Col sm={12}>
+                <Routes>
+                  <Route index element={<AboutMePage />} />
+                  <Route path="portfolio" element={<PortfolioPage />} />
+                  <Route path="contact" element={<ContactPage />} />
+                  <Route path="chi" element={<ChiPage />} />
+                  <Route path="*" element={<PageNotFoundPage />} />
+                </Routes>
+              </Col>
+            </Row>
+          </Container>
+        </Parallax>
+
       </BrowserRouter>
+      
       
       { /*
       <div>

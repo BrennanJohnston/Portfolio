@@ -4,7 +4,15 @@ function ContactPage(props) {
 
   return (
     <div className="custom-page">
-      CONTACT PAGE CONTENT HERE
+      <div className="contact-page-header">
+        Contact Me
+      </div>
+      <div className="contact-page-entry">
+        Email: brennankj@live.com
+      </div>
+      <div className="contact-page-entry">
+        Text/Phone: (479)218-3892
+      </div>
     </div>
   );
 }

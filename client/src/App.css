@@ -17,16 +17,29 @@
   */
 }
 
+.full-page {
+  overflow: hidden;
+  text-shadow: 2px 2px 4px rgb(80, 80, 80);
+}
+
 .webpage-container {
   padding-left: 0px;
   padding-right: 0px;
-  padding-top: 50vh;/*100px;*/
+  padding-top: 45vh;
   max-width: 1600px;
   min-height: 100vh;
 }
 
 .custom-page {
   padding-top: 0px;
+}
+
+.page-header {
+  padding-bottom: 50px;
+  font-size: 64px;
+  font-weight: bold;
+  height: 35vh;
+  text-shadow: 3px 3px 4px rgb(121, 121, 121);
 }
 
 .navbar-brand {
@@ -84,18 +97,51 @@
 
 .info-card {
   min-height: 80vh;
-  max-height: 100vh;
-  /*filter: blur(calc(2.1px * 1));*/
+  max-height: 80vh;
 }
 
 .info-card-header {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 32px;
+  padding-bottom: 30px;
+  text-shadow: 2px 2px 6px rgb(94, 94, 94);
 }
 
-.page-header {
-  padding-bottom: 50px;
-  font-size: 32px;
+.info-card > .row > .col-sm-4 {
+  margin:auto;
+  padding-bottom: 25px;
+}
+
+.info-card > .row > .col-sm-8 {
+  margin:auto;
+  padding-bottom: 25px;
+}
+
+.cat-container {
+  align-items: center;
+}
+
+.cat-container > .row > .col-sm-4 {
+  margin: auto;
+}
+
+.image-thumbnail {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.mini-video {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.contact-page-header {
+  font-size: 48px;
   font-weight: bold;
-  height: 35vh;
+  padding-bottom: 40px;
+}
+
+.contact-page-entry {
+  font-size: 32px;
+  padding-bottom: 15px;
 }
