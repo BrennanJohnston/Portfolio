@@ -94,11 +94,11 @@ function InfoCard(props) {
         (props.alignImageRight) ?
           (
             <Row style={{filter: "blur("+currentBlur+"px)", transform: "translateX("+currentXOffset+"vw) translateY("+currentYOffset+"vh)"}}>
-              <Col sm={8}>
+              <Col sm={(props.imageSource == undefined && props.videoSource == undefined) ? 12 : 8}>
                 {props.text}
               </Col>
 
-              <Col sm={4}>
+              <Col sm={(props.imageSource == undefined && props.videoSource == undefined) ? 0 : 4}>
                 {getImageOrVideoElement()}
               </Col>
             </Row>
@@ -107,12 +107,11 @@ function InfoCard(props) {
         :
           (
             <Row style={{filter: "blur("+currentBlur+"px)", transform: "translateX("+currentXOffset+"vw) translateY("+currentYOffset+"vh)"}}>
-              <Col sm={4}>
-                
+              <Col sm={(props.imageSource == undefined && props.videoSource == undefined) ? 0 : 4}>
                 {getImageOrVideoElement()}
               </Col>
 
-              <Col sm={8}>
+              <Col sm={(props.imageSource == undefined && props.videoSource == undefined) ? 12 : 8}>
                 {props.text}
               </Col>
             </Row>

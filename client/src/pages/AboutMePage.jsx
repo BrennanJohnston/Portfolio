@@ -32,7 +32,7 @@ function AboutMePage(props) {
 
         <Row>
           <Col sm={12}>
-            <InfoCard headerText="Who I Am" text={whoIAmText} imagePath="TEST/IMAGE/PATH.JPG"/>
+            <InfoCard headerText="Who I Am" text={whoIAmText}/>
           </Col>
         </Row>
       </Container>
