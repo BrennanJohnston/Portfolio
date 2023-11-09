@@ -91,13 +91,11 @@
 .nav-menu-button:active:focus {
 }
 
-.info-card-container > .row {
-  padding-bottom: 80px;
-}
+
 
 .info-card {
-  min-height: 80vh;
-  max-height: 80vh;
+  min-height: 100vh;
+  max-height: 100vh;
 }
 
 .info-card-header {
@@ -105,6 +103,10 @@
   font-size: 32px;
   padding-bottom: 30px;
   text-shadow: 2px 2px 6px rgb(94, 94, 94);
+}
+
+.info-card-container > .row {
+  padding-bottom: 80px;
 }
 
 .info-card > .row > .col-sm-4 {
