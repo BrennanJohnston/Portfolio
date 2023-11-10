@@ -1,9 +1,10 @@
 import { useState } from 'react';
+import CustomPage from '../components/CustomPage';
 
 function ContactPage(props) {
 
   return (
-    <div className="custom-page">
+    <CustomPage>
       <div className="contact-page-header">
         Contact Me
       </div>
@@ -13,7 +14,7 @@ function ContactPage(props) {
       <div className="contact-page-entry">
         Text/Phone: (479)218-3892
       </div>
-    </div>
+    </CustomPage>
   );
 }
 

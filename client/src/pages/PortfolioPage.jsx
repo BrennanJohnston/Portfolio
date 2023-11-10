@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import { Row, Col } from 'react-bootstrap';
 import InfoCard from '../components/InfoCard';
+import CustomPage from '../components/CustomPage';
 
 import GMSVideo from '../images/dynamicshadowsgms.webm';
 import flowfieldVideo from '../images/flowfield.webm';
@@ -24,7 +25,7 @@ function PortfolioPage(props) {
   const andMoreText = "This is a list of a few of my projects.  I have many other projects finished, unfinished, and currently working on.";
 
   return (
-    <div className="custom-page">
+    <CustomPage>
       <div className="page-header">
         Portfolio
       </div>
@@ -78,7 +79,7 @@ function PortfolioPage(props) {
         </Row>
 
       </Container>
-    </div>
+    </CustomPage>
   );
 }
 

@@ -13,11 +13,12 @@ import ContactPage from './pages/ContactPage';
 import ChiPage from './pages/ChiPage';
 import PageNotFoundPage from './pages/PageNotFoundPage';
 import { Parallax } from 'react-parallax';
+import ScrollToTop from 'react-scroll-to-top';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import background1Image from './images/background9.jpg';
 import background2Image from './images/background2.jpg';
 import background3Image from './images/background3.jpg';
-import './App.css'
+import './App.css';
 import './ColorTheme.css';
 
 function App() {
@@ -35,7 +36,7 @@ function App() {
 
   useEffect(()=>{
     window.addEventListener('scroll', handleScroll);
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     }
@@ -47,6 +48,8 @@ function App() {
         <SiteNavMenu show={showNavMenu} onHide={handleNavMenuClose} onShow={handleNavMenuShow}/>
 
         <SiteNavBar showNavMenu={showNavMenu} handleNavMenuShow={handleNavMenuShow}/>
+
+        <ScrollToTop smooth />
 
         <Parallax blur={8} bgImage={background1Image} strength={1000} bgImageStyle={{}}>
           <Container className="webpage-container">

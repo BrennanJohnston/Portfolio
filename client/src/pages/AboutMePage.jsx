@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import { Row, Col } from 'react-bootstrap';
 import InfoCard from '../components/InfoCard';
+import CustomPage from '../components/CustomPage';
 import csImage from '../images/cs.png';
 import uafsImage from '../images/uafs.jpg';
 
@@ -13,7 +14,7 @@ function AboutMePage(props) {
   const whoIAmText = "I am an easy-going guy who likes to get along with people as best I can.  My M&B personality type is INTJ (if you care about that sort of thing).  Besides computer-related things, I enjoy multiple other hobbies.  I like to handpaint miniatures, primarily Warhammer 40k and Age of Sigmar figures (I'm told I have gotten quite good at it).  I like to go metal-detecting in search of something cool, preferably an arrowhead or gold ring, but so far it's mostly many, many bullet-casings, soda cans from the 90's and prior, and mutilated chunks of metal, of which I can't fathom how they got there.  I like developing small videogames and playing a multitude of games, mainly on PC and Switch.";
 
   return (
-    <div className="custom-page">
+    <CustomPage>
       <div className="page-header">
         About Me
       </div>
@@ -38,7 +39,7 @@ function AboutMePage(props) {
       </Container>
       
 
-    </div>
+    </CustomPage>
   );
 }
 

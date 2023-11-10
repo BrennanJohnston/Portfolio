@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import CatContainer from '../components/CatContainer';
+import CustomPage from '../components/CustomPage';
 
 function ChiPage(props) {
 
   return (
-    <div className="custom-page">
+    <CustomPage>
       <div className="page-header">
         My Cat
       </div>
       <CatContainer />
-    </div>
+    </CustomPage>
   );
 }
 
