@@ -95,7 +95,7 @@
 
 .info-card {
   min-height: 100vh;
-  max-height: 100vh;
+  /*max-height: 100vh;*/
 }
 
 .info-card-header {
